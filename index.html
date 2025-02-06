@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROJECT</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            background: linear-gradient(to right, #0066ff, #33ccff);
+            color: white;
+        }
+        .container {
+            max-width: 900px;
+            margin: 50px auto;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            color: black;
+        }
+        .pdf-container {
+            margin-top: 20px;
+            width: 100%;
+        }
+        iframe {
+            width: 100%;
+            height: 600px;
+            border: none;
+        }
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+        button {
+            padding: 12px 18px;
+            font-size: 16px;
+            border: none;
+            background: #ff6600;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s, transform 0.2s;
+        }
+        button:hover {
+            background: #cc5200;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>My Project's</h1>
+        <p>Click on a project to view .</p>
+        <div class="buttons">
+            <button onclick="showPDF('project2.pdf')">Bio-Fiber Reinforced Concrete </button>
+            <button onclick="showPDF('project3.pdf')">Concrete Mixes & Material Testing Project</button>
+        </div>
+        <div class="pdf-container">
+            <iframe id="pdfViewer" src=""></iframe>
+        </div>
+    </div>
+
+    <script>
+        function showPDF(pdf) {
+            document.getElementById('pdfViewer').src = pdf;
+        }
+    </script>
+</body>
+</html>
